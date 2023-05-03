@@ -38,8 +38,11 @@
 	<set name="BUILD_DIR" value="exportJon/release" unless="debug" />
 	<set name="BUILD_DIR" value="exportJon/32bit" if="32bit" />
 
-	<classpath name="sourceJon" />
-  	<assets path="mobile" rename="assets/mobile" if="mobile" /> <!-- in order to not have the mobile assets in another builds -saw -->
+	<classpath name="source" />
+  	<assets path="mobile" rename="assets/mobile" if="mobile" /> <!-- in order to not have the 
+  	mobile assets in another builds -saw -->
+		</section>
+		<classpath name="sourceJon" />
 	<assets path="assets/preload" rename="assets" exclude="*.ogg" if="web"/>
 	<assets path="assets/preload" rename="assets" exclude="*.mp3" unless="web"/>
 	
@@ -102,7 +105,6 @@
 	<haxelib name="flixel-addons" />
 	<haxelib name="hscript" />
 	<haxelib name="actuate" />
-  <haxelib name="extension-webm" if="desktop" />
 	<haxelib name="extension-androidtools" if="android" />
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
